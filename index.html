@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الخضار والفواكه</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="متجر الخضار والفواكه" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">التصنيفات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers">العروض</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">المنتجات</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-success position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        السلة
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>أطيب الخضار والفواكه الطازجة</h1>
+                    <p class="lead">نوفر لك أجود أنواع الخضار والفواكه الطازجة يومياً</p>
+                    <a href="#products" class="btn btn-success btn-lg">تسوق الآن</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/hero-image.jpg" alt="خضار وفواكه طازجة" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">التصنيفات</h2>
+            <div class="row">
+                <div class="col-md-12 mb-4 text-center">
+                    <button class="btn btn-success category-btn active" data-category="all">جميع المنتجات</button>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="category-card card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-carrot fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">خضراوات</h5>
+                            <button class="btn btn-outline-success category-btn" data-category="vegetables">عرض المنتجات</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="category-card card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-apple-alt fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">فواكه</h5>
+                            <button class="btn btn-outline-success category-btn" data-category="fruits">عرض المنتجات</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="category-card card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-seedling fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">ورقيات</h5>
+                            <button class="btn btn-outline-success category-btn" data-category="leafy">عرض المنتجات</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="category-card card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-pepper-hot fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">توابل وبهارات</h5>
+                            <button class="btn btn-outline-success category-btn" data-category="spices">عرض المنتجات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="ابحث عن المنتجات...">
+                        <button class="btn btn-success" type="button" id="search-button">
+                            <i class="fas fa-search"></i> بحث
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="offers" class="special-offers py-4">
+        <div class="container">
+            <h2 class="text-center mb-4">العروض الخاصة</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card offer-card">
+                        <div class="card-body">
+                            <span class="badge bg-danger position-absolute top-0 end-0 mt-2 me-2">خصم 20%</span>
+                            <h5 class="card-title">سلة الخضراوات الأسبوعية</h5>
+                            <p class="card-text">تشمل طماطم، خيار، بطاطس، بصل، وجزر</p>
+                            <p class="price"><del>100 ريال</del> <span class="text-danger">80 ريال</span></p>
+                            <button class="btn btn-success add-to-cart" data-name="سلة الخضراوات الأسبوعية" data-price="80">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card offer-card">
+                        <div class="card-body">
+                            <span class="badge bg-danger position-absolute top-0 end-0 mt-2 me-2">خصم 15%</span>
+                            <h5 class="card-title">سلة الفواكه المميزة</h5>
+                            <p class="card-text">تشمل تفاح، موز، برتقال، وعنب</p>
+                            <p class="price"><del>120 ريال</del> <span class="text-danger">102 ريال</span></p>
+                            <button class="btn btn-success add-to-cart" data-name="سلة الفواكه المميزة" data-price="102">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card offer-card">
+                        <div class="card-body">
+                            <span class="badge bg-danger position-absolute top-0 end-0 mt-2 me-2">خصم 25%</span>
+                            <h5 class="card-title">سلة الطبخ الأساسية</h5>
+                            <p class="card-text">تشمل بصل، ثوم، طماطم، وبطاطس</p>
+                            <p class="price"><del>80 ريال</del> <span class="text-danger">60 ريال</span></p>
+                            <button class="btn btn-success add-to-cart" data-name="سلة الطبخ الأساسية" data-price="60">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">منتجاتنا</h2>
+            <div class="row" id="products-container">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>تواصل معنا</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> 123-456-789<br>
+                        <i class="fas fa-envelope"></i> info@example.com<br>
+                        <i class="fas fa-map-marker-alt"></i> المدينة، الشارع، رقم المبنى
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">من نحن</a></li>
+                        <li><a href="#" class="text-light">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-light">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>تابعنا</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">جميع الحقوق محفوظة &copy; 2024 متجر الخضار والفواكه</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Products Data -->
+    <script src="products.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
